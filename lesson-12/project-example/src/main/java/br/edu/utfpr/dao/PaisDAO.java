@@ -12,7 +12,7 @@ import java.util.List;
 import lombok.extern.java.Log;
 
 @Log
-public class PaisDAO {
+public class PaisDAO extends TemplateMethodDAO{
 
     // Responsável por criar a tabela País no banco
     public PaisDAO() {
