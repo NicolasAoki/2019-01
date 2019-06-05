@@ -13,7 +13,7 @@ import lombok.extern.java.Log;
 
 @Log
 public class PaisDAO extends TemplateMethodDAO<PaisDTO>{
-
+    
     // Responsável por criar a tabela País no banco
     public PaisDAO() {
         try ( Connection conn = DriverManager.getConnection("jdbc:derby:memory:database;create=true")) {
@@ -128,9 +128,9 @@ public class PaisDAO extends TemplateMethodDAO<PaisDTO>{
         
         return false;
     }
-    @Override
-    public PaisDTO listarPorId (int id) {
-        return this.listarTodos().stream().filter(p -> p.getId() == id).findAny().orElseThrow(RuntimeException::new);
-    }
+    // @Override
+    // public PaisDTO listarPorId (int id) {
+    //     return this.listarTodos().stream().filter(p -> p.getId() == id).findAny().orElseThrow(RuntimeException::new);
+    // }
 
 }
