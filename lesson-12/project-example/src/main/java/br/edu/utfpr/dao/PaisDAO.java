@@ -30,8 +30,13 @@ public class PaisDAO extends TemplateMethodDAO<PaisDTO>{
             e.printStackTrace();
         }
     }
+<<<<<<< HEAD
     @Override
     public boolean incluir(PaisDTO pais) {
+=======
+
+    public boolean inserir(PaisDTO pais) {
+>>>>>>> upstream/master
         try ( Connection conn = DriverManager.getConnection("jdbc:derby:memory:database")) {
 
             String sql = "INSERT INTO pais (nome, sigla, codigoTelefone) VALUES (?, ?, ?)";
@@ -128,9 +133,13 @@ public class PaisDAO extends TemplateMethodDAO<PaisDTO>{
         
         return false;
     }
+<<<<<<< HEAD
     // @Override
     // public PaisDTO listarPorId (int id) {
     //     return this.listarTodos().stream().filter(p -> p.getId() == id).findAny().orElseThrow(RuntimeException::new);
     // }
+=======
+
+>>>>>>> upstream/master
 
 }
